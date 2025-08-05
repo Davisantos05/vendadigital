@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Catalist - Ebooks de Investimentos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container header-container">
+            <h1 class="logo">Catalist</h1>
+            <nav>
+                <a href="index.html" class="nav-link">Início</a>
+                <a href="fitness.html" class="nav-link">Fitness</a>
+                <a href="investimento.html" class="nav-link active">Investimentos</a>
+                <a href="estudos.html" class="nav-link">Estudos</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="categoria">
+            <div class="container">
+                <h2 class="categoria-titulo">E-books de Investimentos</h2>
+
+                <div class="produto-card">
+                    <img src="invest1.png" alt="Investindo do Zero">
+                    <h4>Investindo do Zero</h4>
+                    <p class="preco">R$39,90</p>
+                    <p class="descricao-curta">
+                        Guia para quem quer começar a investir.
+                        <span class="texto-oculto" id="maisInvest1">
+                            Aprenda sobre renda fixa, ações, fundos e criptomoedas de forma prática e segura.
+                        </span>
+                    </p>
+                    <button class="btn-secundary" onclick="toggleTexto('maisInvest1', this)">Saiba mais</button>
+                    <button class="btn-secundary" onclick="abrirModal('ebook')">Comprar</button>
+                </div>
+
+                <div class="produto-card">
+                    <img src="invest2.png" alt="Independência Financeira">
+                    <h4>Independência Financeira</h4>
+                    <p class="preco">R$49,90</p>
+                    <p class="descricao-curta">
+                        Planejamento financeiro para o longo prazo.
+                        <span class="texto-oculto" id="maisInvest2">
+                            Técnicas de economia, investimentos mensais, juros compostos e como montar sua reserva.
+                        </span>
+                    </p>
+                    <button class="btn-secundary" onclick="toggleTexto('maisInvest2', this)">Saiba mais</button>
+                    <button class="btn-secundary" onclick="abrirModal('ebook')">Comprar</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-container">
+            <p>&copy; 2025 Catalist. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="botao.js"></script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Catalist - Ebooks Fitness</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container header-container">
+            <h1 class="logo">Catalist</h1>
+            <nav>
+                <a href="index.html" class="nav-link">Início</a>
+                <a href="fitness.html" class="nav-link active">Fitness</a>
+                <a href="investimento.html" class="nav-link">Investimentos</a>
+                <a href="estudos.html" class="nav-link">Estudos</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="categoria">
+            <div class="container">
+                <h2 class="categoria-titulo">E-books de Fitness</h2>
+
+                <div class="produto-card">
+                    <img src="fitness1.png" alt="Guia de Treino em Casa">
+                    <h4>Guia de Treino em Casa</h4>
+                    <p class="preco">R$19,90</p>
+                    <p class="descricao-curta">Treinos funcionais para fazer sem equipamentos. <span class="texto-oculto" id="maisTreino">Inclui planos semanais, dicas de postura e aquecimento.</span></p>
+                    <button class="btn-secundary" onclick="toggleTexto('maisTreino', this)">Saiba mais</button>
+                    <button class="btn-secundary" onclick="abrirModal('ebook')">Comprar</button>
+                </div>
+
+                <div class="produto-card">
+                    <img src="fitness2.png" alt="Alimentação Fitness">
+                    <h4>Alimentação Fitness</h4>
+                    <p class="preco">R$24,90</p>
+                    <p class="descricao-curta">Receitas saudáveis para todos os dias. <span class="texto-oculto" id="maisAlimentacao">Cardápios práticos e econômicos para manter sua dieta sem sofrimento.</span></p>
+                    <button class="btn-secundary" onclick="toggleTexto('maisAlimentacao', this)">Saiba mais</button>
+                    <button class="btn-secundary" onclick="abrirModal('ebook')">Comprar</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-container">
+            <p>&copy; 2025 Catalist. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="botao.js"></script>
+</body>
+</html>

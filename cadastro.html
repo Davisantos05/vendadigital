@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastro - Catalist</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Cabeçalho com logo clicável -->
+    <header class="cadastro-header">
+        <div class="container">
+            <a href="index.html" class="logo-link">
+                <h1 class="logo">Catalist</h1>
+            </a>
+            <p class="subtitulo">Crie sua conta gratuita</p>
+        </div>
+    </header>
+
+    <main>
+        <form id="formCadastro" class="form-cadastro">
+            <input type="text" id="nome" placeholder="Nome completo" required>
+            <input type="email" id="email" placeholder="E-mail" required>
+            <input type="password" id="senha" placeholder="Senha (mín. 8 caracteres)" required>
+            <input type="password" id="confirmar" placeholder="Confirme sua senha" required>
+            <button type="submit">Cadastrar</button>
+        </form>
+    </main>
+
+    <footer>
+        <div class="container footer-container">
+            <p>&copy; 2025 Catalist. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="botao.js"></script>
+</body>
+</html>
