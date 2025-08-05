@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <title>Catalist - Loja Digital</title>
+    <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+        /* Estilo para o texto flutuante de descrição */
+        .texto-explicativo {
+            display: none;
+            position: absolute;
+            top: 55px;
+            background-color: #5c67f2;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 5px;
+            font-size: 14px;
+            white-space: nowrap;
+            z-index: 999;
+        }
+
+        nav {
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+   <header>
+  <div class="container header-container">
+    <h1 class="logo">Catalist</h1>
+    <nav>
+      <a href="index.html" class="nav-link active">Início</a>
+
+      <!-- Menu suspenso de Produtos -->
+      <div class="menu-hover" style="display: inline-block; position: relative;">
+        <a href="#" class="nav-link">Produtos ▾</a>
+        <div class="dropdown-menu">
+          <h4>Ebooks Personalizados</h4>
+
+          <a href="avaliação.html">Conheça-nos</a>
+
+          <div class="subcategoria">
+            <strong>Melhores investimentos!!</strong>
+          </div>
+          <a href="investimentos.html">Investindo do zero!</a>
+          <a href="#">Dependência Financeira</a>
+
+          <div class="subcategoria">
+            <strong>A Melhor Escola em Pdf</strong>
+          </div>
+          <a href="estudos.html">Organização para estudantes</a>
+          <a href="estudos.html">Como passar no vestibular</a>
+
+          <div class="subcategoria">
+            <strong>Fitness</strong>
+          </div>
+          <a href="fitness.html">Alimentação fitness</a>
+          <a href="fitness.html">Guia de treino em Casa</a>
+        </div>
+      </div>
+
+      <!-- Link Login separado do dropdown -->
+      <a href="cadastro.html" class="nav-link">Login</a>
+    </nav>
+  </div>
+</header>
+
+    <main>
+        <section class="hero">
+            <div class="container hero-content">
+                <h2>Venda seus produtos digitais com facilidade</h2>
+                <p>Plataforma simples, segura e completa para você começar a vender online hoje mesmo.</p>
+                <a href="cadastro.html" class="btn-primary">Comece Agora</a>
+            </div>
+        </section>
+
+        <section class="produtos container">
+            <h3>Produtos em Destaque</h3>
+
+            <div class="produto-card">
+                <img src="ebook.png" alt="E-book Poder da Mente" />
+                <h4>E-book Poder da Mente</h4>
+                <p class="preco">R$29,90</p>
+                <p class="descricao-curta">
+                    Aprenda a usar o poder da sua mente para alcançar seus objetivos.
+                    <span class="texto-oculto" id="maisEbook">Este e-book oferece técnicas de concentração, meditação e produtividade que mudarão sua vida.</span>
+                </p>
+                <button class="btn-secundary" onclick="toggleTexto('maisEbook', this)">Saiba mais</button>
+                <button class="btn-secundary" onclick="abrirModal('ebook')">Comprar</button>
+            </div>
+
+            <div class="produto-card">
+                <img src="curso-online.png" alt="Curso Online de Marketing" />
+                <h4>Curso Online de Marketing</h4>
+                <p class="preco">R$199,90</p>
+                <p class="descricao-curta">
+                    Domine estratégias modernas de marketing digital.
+                    <span class="texto-oculto" id="maisCurso">O curso inclui SEO, tráfego pago, email marketing e muito mais para você escalar suas vendas online.</span>
+                </p>
+                <button class="btn-secundary" onclick="toggleTexto('maisCurso', this)">Saiba mais</button>
+                <button class="btn-secundary" onclick="abrirModal('curso')">Comprar</button>
+            </div>
+
+            <div class="produto-card">
+                <img src="template-web.png" alt="Template Website Profissional" />
+                <h4>Template Website Profissional</h4>
+                <p class="preco">R$79,90</p>
+                <p class="descricao-curta">
+                    Construa sites bonitos e responsivos em minutos.
+                    <span class="texto-oculto" id="maisTemplate">Inclui layout moderno, componentes prontos e código limpo para facilitar sua personalização.</span>
+                </p>
+                <button class="btn-secundary" onclick="toggleTexto('maisTemplate', this)">Saiba mais</button>
+                <button class="btn-secundary" onclick="abrirModal('template')">Comprar</button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Rodapé com links para categorias -->
+    <footer>
+        <div class="container footer-container">
+            <h4>Categorias</h4>
+            <nav class="rodape-links">
+                <a href="fitness.html">Ebook Fitness</a> |
+                <a href="investimentos.html">Ebook Investimentos</a> |
+                <a href="estudos.html">Ebook Estudos</a>
+            </nav>
+            <p>&copy; 2025 Catalist. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Modal de Produto -->
+    <div id="modalProduto" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="fecharModal()">&times;</span>
+            <h2 id="modalTitulo"></h2>
+            <img id="modalImagem" src="" alt="" />
+            <p id="modalDescricao"></p>
+            <p id="modalPreco" class="preco"></p>
+            <button class="btn-primary" onclick="finalizarCompra()">Finalizar Compra</button>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="botao.js"></script>
+
+    <!-- Botão de voltar ao topo -->
+    <button onclick="scrollToTop()" id="btnTopo" title="Voltar ao topo">↑</button>
+
+    <!-- Botão Flutuante WhatsApp -->
+    <a href="https://wa.me/+5511984612195" class="whatsapp-float" target="_blank" title="Fale conosco no WhatsApp">
+        💬
+    </a>
+</body>
+</html>
